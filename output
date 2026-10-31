@@ -1,0 +1,187 @@
+============================================================
+ Welcome to the Pandas Analyzer & Data Visualization Tool
+============================================================
+This toolkit demonstrates Pandas, NumPy, Matplotlib and
+Seaborn integrated with OOP principles.
+
+=======================================================
+      Data Analysis & Visualization Program
+=======================================================
+Please select an option:
+1. Load Dataset
+2. Explore Data
+3. Perform DataFrame Operations
+4. Handle Missing Data
+5. Generate Descriptive Statistics
+6. Data Visualization
+7. Save Visualization
+8. Exit
+=======================================================
+Enter your choice: 1
+Enter the path of the dataset (CSV file): data/sales_data.csv
+Error: File 'data/sales_data.csv' not found.
+Do you want to create a synthetic sales dataset at this path? (y/n): y
+Synthetic dataset created at 'data/sales_data.csv' (200 rows).
+Dataset loaded successfully!
+Shape: 200 rows x 8 columns
+Columns: SalesID, Date, Product, Region, Units, UnitPrice, Sales, Profit
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 2
+
+--- Explore Data ---
+1. Display the first 5 rows
+2. Display the last 5 rows
+3. Display column names
+4. Display data types
+5. Display basic info
+6. Display dataset shape and memory usage
+7. Go Back
+Enter your choice: 1
+
+First 5 rows:
+   SalesID       Date    Product   Region  Units  UnitPrice    Sales  Profit
+0      101 2022-03-14  Product A    North     32      74.55  2385.60  436.21
+1      102 2022-07-22  Product C     East     12      45.10   541.20   95.77
+2      103 2022-11-05  Product E    South     45      21.83   982.35  153.44
+3      104 2022-01-30  Product B    West      7      88.72   621.04    NaN
+4      105 2022-09-17  Product D  Central     28      33.94   950.32  212.15
+
+--- Explore Data ---
+...
+Enter your choice: 7
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 3
+
+--- DataFrame Operations ---
+1. Mathematical Operations
+2. NumPy Array Indexing & Slicing
+3. Combine DataFrames
+4. Split DataFrame
+5. Search, Sort and Filter
+6. Aggregating Functions
+7. Create Pivot Table
+8. Go Back
+Enter your choice: 5
+
+--- Search, Sort and Filter ---
+1. Search for a value
+2. Sort the dataset
+3. Filter rows by condition
+4. Filter rows by date range
+5. Go Back
+Enter your choice: 3
+Available columns: SalesID, Units, UnitPrice, Sales, Profit
+Enter the numeric column to filter on: Sales
+Operators:  >   <   ==   !=   >=   <=
+Enter the comparison operator: >
+Enter the threshold value: 3000
+
+14 record(s) where Sales > 3000 (first 10):
+    SalesID       Date    Product   Region  Units  UnitPrice    Sales  Profit
+6       107 2022-04-11  Product C    North     48      92.31  4430.88  812.34
+9       110 2022-08-02  Product A  Central     36      89.05  3205.80  577.04
+...
+
+--- Search, Sort and Filter ---
+Enter your choice: 5
+
+Press Enter to continue...
+
+--- DataFrame Operations ---
+Enter your choice: 8
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 4
+
+--- Handle Missing Data ---
+1. Display rows with missing values
+2. Fill missing values with mean
+3. Drop rows with missing values
+4. Replace missing values with a specific value
+Enter your choice: 1
+Found 18 row(s) with missing values:
+    SalesID       Date    Product   Region  Units  UnitPrice   Sales  Profit
+3       104 2022-01-30  Product B     West      7      88.72  621.04     NaN
+...
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 4
+
+--- Handle Missing Data ---
+Enter your choice: 2
+Filled missing numeric values with column means (18 value(s) replaced).
+Remaining missing values: 0
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 5
+
+--- Descriptive Statistics ---
+1. describe() summary
+2. Standard deviation and variance
+3. Percentiles / quantiles
+4. Correlation matrix
+5. Go Back
+Enter your choice: 1
+
+Descriptive statistics (numeric columns):
+          SalesID       Units   UnitPrice       Sales      Profit
+count  200.000000  200.000000  200.000000  200.000000  200.000000
+mean   200.500000   24.850000   55.032100  1589.221000  285.667000
+std     57.879185   14.074000   25.991700  1054.117000  222.884000
+min    101.000000    1.000000   10.010000   115.420000   12.660000
+25%    150.750000   12.000000   33.100000   705.150000  108.910000
+50%    200.500000   25.000000   55.220000  1402.330000  243.530000
+75%    250.250000   37.000000   77.010000  2321.730000  430.320000
+max    300.000000   49.000000   99.980000  4857.600000  957.410000
+
+--- Descriptive Statistics ---
+Enter your choice: 5
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 6
+
+--- Data Visualization ---
+1. Bar Plot
+2. Line Plot
+3. Scatter Plot
+4. Pie Chart
+5. Histogram
+6. Stack Plot
+7. Heatmap (Seaborn)
+8. Box Plot (Seaborn)
+9. Subplots Dashboard
+10. Go Back
+Enter your choice: 3
+Available columns: SalesID, Units, UnitPrice, Sales, Profit
+Enter x-axis column name: Sales
+Available columns: SalesID, Units, UnitPrice, Sales, Profit
+Enter y-axis column name: Profit
+Scatter Plot displayed successfully!
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 7
+Enter file name to save the plot (e.g., scatter_plot.png): output/scatter_plot.png
+Visualization saved as output/scatter_plot.png successfully!
+
+Press Enter to continue...
+
+=======================================================
+Enter your choice: 8
+
+Exiting the program. Goodbye!
